@@ -1,0 +1,240 @@
+//colors
+$white: white;
+$red: red;
+$gray:  gray;
+$color_gold_sand_approx: burlywood;
+
+//fonts
+$font_0: gothicFont;
+$font_1: sanchezFont;
+
+//urls
+$url_0: url(assets/fonts/alternate-gothic/AlternateGothic-No2.woff);
+$url_1: url(assets/fonts/sanchez/sanchez-regular-webfont.woff);
+$url_2: url(assets/img/background-dark-gray.jpg);
+$url_3: url(assets/img/Arrow.svg);
+$url_4: url(assets/img/diamond-orange.png);
+$url_5: url(assets/img/grid-image-1.jpg);
+$url_6: url(assets/img/grid-image-2.jpg);
+$url_7: url(assets/img/grid-image-3.jpg);
+
+$breakpoint_tablet: 640px;
+$breakpoint-screen: 768px;
+
+@font-face {
+	font-family: $font_0;
+	src: $url_0;
+}
+@font-face {
+	font-family: $font_1;
+	src: $url_1;
+}
+
+body {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+p {
+	font-family: $font_1;
+}
+
+section {
+	min-height: 480px;
+}
+
+nav {
+	background: $url_2;
+	border-radius: 0;
+	height: 100px;
+	img {
+		height: 50px;
+		margin: 20px;
+	}
+}
+
+
+.navbar.navbar-default {
+	padding: 0;
+	border: none;
+	.navbar-collapse {
+		border: none;
+		box-shadow: none;
+	}
+	.navbar-nav > li > a {
+		color: $white;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-family: $font_0;
+		color: $white;
+		padding-top: 40px;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+.navbar-custom .navbar-toggle:focus {
+	color: $red;
+}
+.navItems li{
+   
+    &:hover {
+	color: $red;
+    }
+}
+
+#toggle{
+    margin: 30px;
+}
+
+.navbar-collapse{
+    background: $url_2;
+}
+
+@mixin slideControl{
+    content: $url_3;
+    height: 40px;
+    width: 40px;
+    margin-top: 450px;
+    background: none !important;
+}
+
+.carousel-control.left{
+    @include slideControl; 
+    margin-left: 50px;
+}
+
+.carousel-control.right{
+    @include slideControl;
+    transform: scaleX(-1);
+    margin-right: 50px;
+}
+
+
+#duplicateImages {
+	background: 
+        $url_4 280px 120px no-repeat,
+        $url_4 160px 250px no-repeat, 
+        $url_4 400px 180px no-repeat, 
+        $url_4 640px 220px no-repeat;
+	padding: 40px;
+	background-size: 50px, 100px, 80px, 40px;
+	opacity: 0.95;
+}
+.brandInfo {
+	background: $url_2;
+	text-align: center;
+	color: $white;
+	margin: 0;
+	opacity: 1;
+}
+
+.brandText {
+	p {
+		margin-top: 150px;
+		font-family: $font_0;
+		font-size: 55px;
+	}
+	h3 {
+		font-family: $font_1;
+	}
+}
+
+.infoSection .row {
+	margin: 50px;
+}
+
+.col-text {
+	height: 20em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.grid-flex {
+	display: flex;
+	margin: 20px;
+	flex-grow: 1;
+	flex-direction: row;
+	position: inherit;
+}
+.col {
+	flex: 1;
+}
+.col-left {
+	order: -1;
+}
+.alignItems {
+	width: 80%;
+}
+.col-image {
+	background-size: cover;
+	background-position: center center;
+}
+#grid1 {
+	background-image: $url_5;
+}
+#grid2 {
+	background-image: $url_6;
+}
+#grid3 {
+	background-image: $url_7;
+}
+#itemTitle {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: $font_0;
+	letter-spacing: 5px;
+	text-align: center;
+}
+#nextSymbol {
+	transform: rotate(180deg);
+}
+
+
+@media(max-width: $breakpoint_tablet) and (min-width: $breakpoint_screen) {
+	.grid-flex {
+		height: 40em;
+		flex-direction: column;
+	}
+	.col {
+		order: vertical;
+	}
+	.col-left {
+		order: 0;
+	}
+	.alignItems {
+		width: 90%;
+	}
+	.col-text div p {
+		padding: 1em;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px $gray;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: $red;
+	border-radius: 5px;
+	&:hover {
+		background: $color_gold_sand_approx;
+	}
+}
+
+.footerClass {
+	padding: 40px;
+	font-family: $font_0;
+	letter-spacing: 3px;
+	background: $url_2;
+	color: $white;
+}
+
+footer img {
+	height: 20px;
+	margin-left: 25px;
+	padding-left: 15px;
+}

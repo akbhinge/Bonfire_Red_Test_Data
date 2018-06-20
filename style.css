@@ -1,0 +1,223 @@
+@font-face {
+  font-family: gothicFont;
+  src: url(assets/fonts/alternate-gothic/AlternateGothic-No2.woff);
+}
+@font-face {
+  font-family: sanchezFont;
+  src: url(assets/fonts/sanchez/sanchez-regular-webfont.woff);
+}
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+p {
+  font-family: sanchezFont;
+}
+
+section {
+  min-height: 480px;
+}
+
+nav {
+  background: url(assets/img/background-dark-gray.jpg);
+  border-radius: 0;
+  height: 100px;
+}
+nav img {
+  height: 50px;
+  margin: 20px;
+}
+
+.navbar.navbar-default {
+  padding: 0;
+  border: none;
+}
+.navbar.navbar-default .navbar-collapse {
+  border: none;
+  box-shadow: none;
+}
+.navbar.navbar-default .navbar-nav > li > a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: gothicFont;
+  color: white;
+  padding-top: 40px;
+}
+.navbar.navbar-default .navbar-nav > li > a:hover {
+  color: red;
+}
+
+.navbar-custom .navbar-toggle:focus {
+  color: red;
+}
+
+.navItems li:hover {
+  color: red;
+}
+
+#toggle {
+  margin: 30px;
+}
+
+.navbar-collapse {
+  background: url(assets/img/background-dark-gray.jpg);
+}
+
+.carousel-control.left {
+  content: url(assets/img/Arrow.svg);
+  height: 40px;
+  width: 40px;
+  margin-top: 450px;
+  margin-left: 50px;
+  background: none !important;
+}
+
+.carousel-control.right {
+  content: url(assets/img/Arrow.svg);
+  height: 40px;
+  width: 40px;
+  margin-top: 450px;
+  margin-right: 50px;
+  background: none !important;
+  transform: scaleX(-1);
+}
+
+#duplicateImages {
+  background: url(assets/img/diamond-orange.png) 280px 120px no-repeat, url(assets/img/diamond-orange.png) 160px 250px no-repeat, url(assets/img/diamond-orange.png) 400px 180px no-repeat, url(assets/img/diamond-orange.png) 640px 220px no-repeat;
+  padding: 40px;
+  background-size: 50px, 100px, 80px, 40px;
+  opacity: 0.95;
+}
+
+.brandInfo {
+  background: url(assets/img/background-dark-gray.jpg);
+  text-align: center;
+  color: white;
+  margin: 0;
+  opacity: 1;
+}
+
+.brandText p {
+  margin-top: 150px;
+  font-family: gothicFont;
+  font-size: 55px;
+}
+.brandText h3 {
+  font-family: sanchezFont;
+}
+
+.infoSection .row {
+  margin: 50px;
+}
+
+.col-text {
+  height: 20em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-flex {
+  display: flex;
+  margin: 20px;
+  flex-grow: 1;
+  flex-direction: row;
+  position: inherit;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-left {
+  order: -1;
+}
+
+.alignItems {
+  width: 80%;
+}
+
+.col-image {
+  background-size: cover;
+  background-position: center center;
+}
+
+#grid1 {
+  background-image: url(assets/img/grid-image-1.jpg);
+}
+
+#grid2 {
+  background-image: url(assets/img/grid-image-2.jpg);
+}
+
+#grid3 {
+  background-image: url(assets/img/grid-image-3.jpg);
+}
+
+#itemTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: gothicFont;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+#nextSymbol {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 640px) and (min-width: 768px) {
+  .grid-flex {
+    height: 40em;
+    flex-direction: column;
+  }
+
+  .col {
+    order: vertical;
+  }
+
+  .col-left {
+    order: 0;
+  }
+
+  .alignItems {
+    width: 90%;
+  }
+
+  .col-text div p {
+    padding: 1em;
+  }
+
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: burlywood;
+}
+
+.footerClass {
+  padding: 40px;
+  font-family: gothicFont;
+  letter-spacing: 3px;
+  background: url(assets/img/background-dark-gray.jpg);
+  color: white;
+}
+
+footer img {
+  height: 20px;
+  margin-left: 25px;
+  padding-left: 15px;
+}
